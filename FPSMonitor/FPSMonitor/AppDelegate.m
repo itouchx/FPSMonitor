@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "FPSMonitor.h"
-
+//#import "FPSMonitor.h"
+#import "FPSMonitor-Swift.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [FPSMonitor showFPS];
+    dispatch_after(1, dispatch_get_main_queue(), ^{
+        [FPSMonitor show];
+    });
     return YES;
 }
 

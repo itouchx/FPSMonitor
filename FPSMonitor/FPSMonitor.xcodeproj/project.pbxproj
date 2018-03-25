@@ -13,7 +13,7 @@
 		D6CE6B751C04CA95005DB3A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6CE6B731C04CA95005DB3A7 /* Main.storyboard */; };
 		D6CE6B771C04CA95005DB3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6CE6B761C04CA95005DB3A7 /* Assets.xcassets */; };
 		D6CE6B7A1C04CA95005DB3A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6CE6B781C04CA95005DB3A7 /* LaunchScreen.storyboard */; };
-		D6CE6B831C04CAA2005DB3A7 /* FPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CE6B821C04CAA2005DB3A7 /* FPSMonitor.m */; };
+		D6E962D52066BD0C008C1B96 /* FPSMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EF162A206531870001F4B2 /* FPSMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		D6CE6B761C04CA95005DB3A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6CE6B791C04CA95005DB3A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6CE6B7B1C04CA95005DB3A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6CE6B811C04CAA2005DB3A7 /* FPSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSMonitor.h; sourceTree = "<group>"; };
-		D6CE6B821C04CAA2005DB3A7 /* FPSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSMonitor.m; sourceTree = "<group>"; };
+		D6EF1629206531870001F4B2 /* FPSMonitor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FPSMonitor-Bridging-Header.h"; sourceTree = "<group>"; };
+		D6EF162A206531870001F4B2 /* FPSMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +61,9 @@
 		D6CE6B691C04CA95005DB3A7 /* FPSMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				D6CE6B811C04CAA2005DB3A7 /* FPSMonitor.h */,
-				D6CE6B821C04CAA2005DB3A7 /* FPSMonitor.m */,
 				D6CE6B6D1C04CA95005DB3A7 /* AppDelegate.h */,
 				D6CE6B6E1C04CA95005DB3A7 /* AppDelegate.m */,
+				D6EF162A206531870001F4B2 /* FPSMonitor.swift */,
 				D6CE6B701C04CA95005DB3A7 /* ViewController.h */,
 				D6CE6B711C04CA95005DB3A7 /* ViewController.m */,
 				D6CE6B731C04CA95005DB3A7 /* Main.storyboard */,
@@ -72,6 +71,7 @@
 				D6CE6B781C04CA95005DB3A7 /* LaunchScreen.storyboard */,
 				D6CE6B7B1C04CA95005DB3A7 /* Info.plist */,
 				D6CE6B6A1C04CA95005DB3A7 /* Supporting Files */,
+				D6EF1629206531870001F4B2 /* FPSMonitor-Bridging-Header.h */,
 			);
 			path = FPSMonitor;
 			sourceTree = "<group>";
@@ -115,6 +115,8 @@
 				TargetAttributes = {
 					D6CE6B661C04CA95005DB3A7 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = GLWCRSS83U;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -154,7 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6CE6B831C04CAA2005DB3A7 /* FPSMonitor.m in Sources */,
+				D6E962D52066BD0C008C1B96 /* FPSMonitor.swift in Sources */,
 				D6CE6B721C04CA95005DB3A7 /* ViewController.m in Sources */,
 				D6CE6B6F1C04CA95005DB3A7 /* AppDelegate.m in Sources */,
 				D6CE6B6C1C04CA95005DB3A7 /* main.m in Sources */,
@@ -267,10 +269,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GLWCRSS83U;
 				INFOPLIST_FILE = FPSMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.FPSMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ubtechinc.jimu2s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FPSMonitor/FPSMonitor-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -278,10 +286,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = GLWCRSS83U;
 				INFOPLIST_FILE = FPSMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.FPSMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ubtechinc.jimu2s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FPSMonitor/FPSMonitor-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -304,6 +317,7 @@
 				D6CE6B801C04CA95005DB3A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
